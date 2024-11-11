@@ -14,13 +14,20 @@ use feature 'say';
 
 sub translate {
     ## FILL THIS IN
-    my (%hash, @arr) = @_;
-    foreach my $word (@arr) {
-        if(exists $hash{$word}){
-            $word = $hash{$word};
+    my ($hash_ref, $arr_ref) = @_;  # Accept references
+
+    # Dereference the hash and array
+    my %hash = %{$hash_ref};
+    my @arr = @{$arr_ref};
+
+    # Modify array elements by index
+    for my $i (0 .. $#arr) {
+        if (exists $hash{$arr[$i]}) {
+            $arr[$i] = $hash{$arr[$i]};
         }
     }
-    return [@arr];
+
+    return \@arr;
 }
 
 my $ra_en_de_xlat = translate({
