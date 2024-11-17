@@ -11,6 +11,6 @@ use warnings;
 use Data::Dump 'pp';
 use feature 'say';
 
-my $ra_ref = (1,2,3,4);
+my $r_sub = shift;
 
-print $ra_ref[0];
+print $r_sub;
