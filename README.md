@@ -34,9 +34,23 @@ foreach my $element (@array) {
 
 # Reference
 
-|`()`|Reference `[]`|Call|
+|Origin `()`|Reference|Call|
 |---|---|---|
-|`@arr = (1,2,3,4)`|`$arr_ref = [1,2,3,4]`|`my @my_arr = @$arr_ref;`
-|`%hash = ( a=>1, b=>2)`|`$hash_ref = [a=>1, b=>2]`|
+|`my @arr = (1,2,3,4)`|`$arr_ref = [1,2,3,4]`|`my @my_arr = @$arr_ref;`
+|` my %hash = (a=>1, b=>2)`|`my $hashref = { a=>1, b=>2 };`|
 ||`my $r_sub = sub { return 'bar'; };`|`&$r_sub();`|
+
+```perl
+my @array = (1, 2, 3);
+for my $element (@array) {
+    say $element;
+}
+```
+
+```perl
+my %hash = (a => 1, b => 2, c => 3);
+for my $key (keys %hash) {
+    say "$key => $hash{$key}";
+}
+```
 
