@@ -1,3 +1,31 @@
+# Flags
+|Flags|Meaning|
+|---|---|
+|`i`|Case insensitive|
+|`m`|Multi lines matching|
+|`s`|Single line matching|
+|`x`|Extend mode (ignore white-space)|
+|`g`|Global matching|
+|`e`|Evalue replacement|
+|`a`|ACII matching|
+
+# Keys
+
+|Keys|Meaning|
+|---|---|
+|`\s`|whitespace|
+|`\w`|A word character (`\w: [a-zA-Z0-9_]`)|
+|`\b`|word boundary|
+|`\B `|The opposite of a word boundary: a position where a word boundary does not exist.|
+|`\U`|uppercase|
+
+# Method
+
+|Methods|Meaning|
+|---|---|
+|`chomp($line)`|Removes only the trailing \n (or whatever $/ is)|
+|`chop`|Removes the last character of a string, regardless of what it is|
+
 # Length
 
 length($_);
